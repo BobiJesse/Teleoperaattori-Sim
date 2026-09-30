@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4833a9af4787e1d47a1ca6303329dd2a
+guid: b7941176ca6a00145a08229840c9ba87
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4804446361586417100
-    second: map_0
+      213: 3987120154805585066
+    second: TowerIcon (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,9 +73,9 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: map_0
+      name: TowerIcon (3)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 256
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ccdb6c4c282dca240800000000000000
-      internalID: 4804446361586417100
+      spriteID: aa4ccf7f7a8155730800000000000000
+      internalID: 3987120154805585066
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      map_0: 4804446361586417100
+      TowerIcon (3)_0: 3987120154805585066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
