@@ -702,6 +702,8 @@ MonoBehaviour:
   bigProblemWindow: {fileID: 0}
   mapWindow: {fileID: 0}
   emailWindow: {fileID: 0}
+  minEventTime: 10
+  maxEventTime: 30
 --- !u!4 &1591743923
 Transform:
   m_ObjectHideFlags: 0

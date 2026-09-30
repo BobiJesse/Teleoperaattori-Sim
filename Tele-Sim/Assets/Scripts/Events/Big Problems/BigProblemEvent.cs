@@ -14,8 +14,12 @@ public class BigProblemEvent : ScriptableObject
 
     public int weight = 1;
 
-    public void Trigger()
+    public void Trigger(bool notification)
     {
+        if (notification)
+        {
+            notificationBanner.SetActive(true);
+        }
         Debug.Log("BigProblemEvent Triggered: " + problemDescription);
     }
 }

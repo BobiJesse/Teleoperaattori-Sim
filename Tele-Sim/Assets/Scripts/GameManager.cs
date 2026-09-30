@@ -1,7 +1,5 @@
-using NUnit.Framework;
+using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +15,10 @@ public class GameManager : MonoBehaviour
     public GameObject bigProblemWindow;
     public GameObject mapWindow;
     public GameObject emailWindow;
+
+    [Header("Timers")]
+    public float minEventTime = 10f;
+    public float maxEventTime = 30f;
 
 
     public void Awake()
@@ -35,13 +37,24 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(RandomEventTimer());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    IEnumerator RandomEventTimer()
+    {
+        while (true)
+        {
+            float randomTime = Random.Range(minEventTime, maxEventTime);
+
+            yield return new WaitForSeconds(randomTime);
+
+            TriggerEvent();
+        }
     }
 
     public void TriggerEvent()
@@ -73,7 +86,14 @@ public class GameManager : MonoBehaviour
         {
             if (roll < listedEvent.weight)
             {
-                listedEvent.Trigger();
+                if (smallProblemWindow.activeSelf)
+                {
+                    listedEvent.Trigger(true);
+                }
+                else
+                {
+                    listedEvent.Trigger(false);
+                }
                 break;
             }
 
@@ -96,7 +116,14 @@ public class GameManager : MonoBehaviour
         {
             if (roll < listedEvent.weight)
             {
-                listedEvent.Trigger();
+                if (bigProblemWindow.activeSelf)
+                {
+                    listedEvent.Trigger(true);
+                }
+                else
+                {
+                    listedEvent.Trigger(false);
+                }
                 break;
             }
 

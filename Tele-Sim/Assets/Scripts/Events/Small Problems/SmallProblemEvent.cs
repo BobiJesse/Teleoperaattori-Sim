@@ -14,8 +14,12 @@ public class SmallProblemEvent : ScriptableObject
 
     public int weight = 1;
 
-    public void Trigger()
+    public void Trigger(bool notification)
     {
+        if (notification)
+        {
+            notificationBanner.SetActive(false);
+        }
         Debug.Log("SmallProblemEvent Triggered: " + problemDescription);
     }
 }
