@@ -1,6 +1,8 @@
 using NUnit.Framework;
-using UnityEngine;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using UnityEditor.PackageManager;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -44,6 +46,61 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
+        int randomNumber = Random.Range(0, 5);
 
+        if (randomNumber < 4)
+        {
+            TriggerSmallEvent();
+        }
+        else
+        {
+            TriggerBigEvent();
+        }
+    }
+
+    public void TriggerSmallEvent()
+    {
+        int weight = 0;
+
+        foreach (var smallProblemEvent in smallEvents)
+        {
+            weight += smallProblemEvent.weight;
+        }
+
+        int roll = Random.Range(0, weight);
+
+        foreach (var listedEvent in smallEvents)
+        {
+            if (roll < listedEvent.weight)
+            {
+                listedEvent.Trigger();
+                break;
+            }
+
+            roll -= listedEvent.weight;
+        }
+    }
+
+    public void TriggerBigEvent()
+    {
+        int weight = 0;
+
+        foreach (var bigProblemEvent in bigEvents)
+        {
+            weight += bigProblemEvent.weight;
+        }
+
+        int roll = Random.Range(0, weight);
+
+        foreach (var listedEvent in bigEvents)
+        {
+            if (roll < listedEvent.weight)
+            {
+                listedEvent.Trigger();
+                break;
+            }
+
+            roll -= listedEvent.weight;
+        }
     }
 }

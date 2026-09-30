@@ -16,6 +16,6 @@ public class SmallProblemEvent : ScriptableObject
 
     public void Trigger()
     {
-
+        Debug.Log("SmallProblemEvent Triggered: " + problemDescription);
     }
 }

@@ -16,6 +16,6 @@ public class BigProblemEvent : ScriptableObject
 
     public void Trigger()
     {
-
+        Debug.Log("BigProblemEvent Triggered: " + problemDescription);
     }
 }
