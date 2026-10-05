@@ -1,11 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Tower tower;
 
     [Header("Events")]
     public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
@@ -60,12 +59,16 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
-        tower.SetAlert(true);
+        var tower = FindObjectOfType<Tower>();
+        if (tower != null)
+        {
+            tower.SetAlert(true);
+        }
 
         int randomNumber = Random.Range(0, 5);
 
         if (randomNumber < 4)
-        {
+        {","explanation":"Call SetAlert on a Tower instance instead of statically. Use FindObjectOfType to locate the Tower in the scene and null-check before calling SetAlert."}```
             TriggerSmallEvent();
         }
         else

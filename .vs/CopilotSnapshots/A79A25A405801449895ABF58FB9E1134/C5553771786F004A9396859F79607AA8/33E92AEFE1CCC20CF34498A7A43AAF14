@@ -1,11 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Tower tower;
 
     [Header("Events")]
     public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
@@ -60,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
-        tower.SetAlert(true);
+        Tower.SetAlert(true);
 
         int randomNumber = Random.Range(0, 5);
 
