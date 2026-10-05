@@ -7,14 +7,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [Header("Events")]
-    public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
-    public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
+    //public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
+    //public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
+    public List<MapObject> mapObjects = new List<MapObject>();
 
+    /*
     [Header("Windows")]
     public GameObject smallProblemWindow;
     public GameObject bigProblemWindow;
     public GameObject mapWindow;
     public GameObject emailWindow;
+    */
 
     [Header("Timers")]
     public float minEventTime = 10f;
@@ -40,11 +43,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(RandomEventTimer());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     IEnumerator RandomEventTimer()
     {
         while (true)
@@ -59,6 +57,13 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
+        int num = Random.Range(0, mapObjects.Count);
+
+        MapObject currentMapObject = mapObjects[num];
+
+        currentMapObject.BreakObject();
+
+        /*
         int randomNumber = Random.Range(0, 5);
 
         if (randomNumber < 4)
@@ -69,7 +74,10 @@ public class GameManager : MonoBehaviour
         {
             TriggerBigEvent();
         }
+        */
     }
+
+    /*
 
     public void TriggerSmallEvent()
     {
@@ -130,4 +138,5 @@ public class GameManager : MonoBehaviour
             roll -= listedEvent.weight;
         }
     }
+    */
 }
