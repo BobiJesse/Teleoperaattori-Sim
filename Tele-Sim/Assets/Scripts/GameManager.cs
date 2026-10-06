@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public List<Tower> Towers = new List<Tower>();
     public List<Tower> brokenTowers = new List<Tower>();
 
+    public GameObject endIMG;
+
     /*
     [Header("Windows")]
     public GameObject smallProblemWindow;
@@ -61,6 +63,7 @@ public class GameManager : MonoBehaviour
         if (Towers.Count <= 0)
         {
             Debug.Log("You lost");
+            endIMG.SetActive(true);
             return;
         }
 
