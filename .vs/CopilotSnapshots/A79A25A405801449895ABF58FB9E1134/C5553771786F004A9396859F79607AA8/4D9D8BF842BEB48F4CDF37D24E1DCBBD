@@ -1,24 +1,20 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Tower tower;
 
     [Header("Events")]
-    //public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
-    //public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
-    public List<MapObject> mapObjects = new List<MapObject>();
+    public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
+    public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
 
-    /*
     [Header("Windows")]
     public GameObject smallProblemWindow;
     public GameObject bigProblemWindow;
     public GameObject mapWindow;
     public GameObject emailWindow;
-    */
 
     [Header("Timers")]
     public float minEventTime = 10f;
@@ -44,6 +40,11 @@ public class GameManager : MonoBehaviour
         StartCoroutine(RandomEventTimer());
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
     IEnumerator RandomEventTimer()
     {
         while (true)
@@ -58,32 +59,23 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
-<<<<<<< HEAD
-        int num = Random.Range(0, mapObjects.Count);
+        var tower = FindObjectOfType<Tower>();
+        if (tower != null)
+        {
+            tower.SetAlert(true);
+        }
 
-        MapObject currentMapObject = mapObjects[num];
-
-        currentMapObject.BreakObject();
-
-        /*
-=======
-        tower.SetAlert(true);
-
->>>>>>> origin/TuomasBranch
         int randomNumber = Random.Range(0, 5);
 
         if (randomNumber < 4)
-        {
+        {","explanation":"Call SetAlert on a Tower instance instead of statically. Use FindObjectOfType to locate the Tower in the scene and null-check before calling SetAlert."}```
             TriggerSmallEvent();
         }
         else
         {
             TriggerBigEvent();
         }
-        */
     }
-
-    /*
 
     public void TriggerSmallEvent()
     {
@@ -144,5 +136,4 @@ public class GameManager : MonoBehaviour
             roll -= listedEvent.weight;
         }
     }
-    */
 }
