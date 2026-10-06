@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d609e811dbd0e974283dab62b202845b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  gameMusic: {fileID: 0}
+  gameMusic: {fileID: 8300000, guid: ab84717dea773044f968e10ee5abca65, type: 3}
   smallAlertSound: {fileID: 8300000, guid: 5cf8f7154e94d26449b04be52dd6602d, type: 3}
   bigAlertSound: {fileID: 8300000, guid: 73016f33732589144a2b43fc5e6d7820, type: 3}
   emailAlertSound: {fileID: 8300000, guid: c3b59469c53c0c8408dd16ae0aad1e91, type: 3}

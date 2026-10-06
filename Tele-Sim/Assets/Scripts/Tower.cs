@@ -13,6 +13,10 @@ public class Tower : MonoBehaviour
 
     private Vector3 originalScale;
     private Coroutine pulseCoroutine;
+    public TextMeshProUGUI TextBox;
+
+    public string WorkingText = "Tower Working";
+    public string AlertText = "Tower Alert";
 
     private void Awake()
     {
