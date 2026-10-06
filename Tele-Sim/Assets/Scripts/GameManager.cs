@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlayGameEndSound();
             Debug.Log("You lost");
             endIMG.SetActive(true);
+            StopAllCoroutines();
             return;
         }
 
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
 
         currentMapObject.SetAlert(true);
         AudioManager.Instance.PlayBigAlertSound();
+        if(minEventTime > 0.3f) minEventTime -= 0.2f;
+        if(maxEventTime > 0.3f) maxEventTime -= 0.2f;
 
 
         /*

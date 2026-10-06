@@ -49,4 +49,5 @@ MonoBehaviour:
   bigAlertSound: {fileID: 8300000, guid: 73016f33732589144a2b43fc5e6d7820, type: 3}
   emailAlertSound: {fileID: 8300000, guid: c3b59469c53c0c8408dd16ae0aad1e91, type: 3}
   clickSound: {fileID: 8300000, guid: 726d498515e94bc489c7f2497f1b60b3, type: 3}
-  gameEndSound: {fileID: 0}
+  gameEndSound: {fileID: 8300000, guid: 96e26555b332c96478580af838b53f06, type: 3}
+  kaboom: {fileID: 8300000, guid: ea3762e67e12dd847a709e7607f111ca, type: 3}

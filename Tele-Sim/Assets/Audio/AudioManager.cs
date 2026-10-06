@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip emailAlertSound;
     public AudioClip clickSound;
     public AudioClip gameEndSound;
+    public AudioClip kaboom;
 
     private AudioSource musicSource;
     private AudioSource soundSource;
@@ -85,6 +86,7 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.Stop();
             soundSource.PlayOneShot(gameEndSound);
+            soundSource.PlayOneShot(kaboom);
         }
     }
 

@@ -156,7 +156,7 @@ MonoBehaviour:
   - {fileID: 711558382}
   brokenTowers: []
   endIMG: {fileID: 354960878}
-  minEventTime: 5
+  minEventTime: 7
   maxEventTime: 10
 --- !u!4 &239776614
 Transform:
@@ -1485,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8454850843497615757, guid: fd20b64c695157b43bbb5c878eff8bdb, type: 3}
+      propertyPath: gameEndSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 96e26555b332c96478580af838b53f06, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -14,6 +14,7 @@ public class Tower : MonoBehaviour
 
     private Vector3 originalScale;
     private Coroutine pulseCoroutine;
+    public GameObject infoPage;
     public GameObject fixButton;
     public bool isBroken;
 
@@ -38,6 +39,10 @@ public class Tower : MonoBehaviour
         {
             isBroken = true;
             fixButton.SetActive(true);
+            if(infoPage.activeSelf == false)
+            {
+                infoPage.SetActive(true);
+            }
             descriptionText.text = brokenText;
             buttonImage.sprite = alertSprite;
             if (pulseCoroutine == null)
