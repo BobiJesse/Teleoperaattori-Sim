@@ -119,6 +119,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &239776612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239776614}
+  - component: {fileID: 239776613}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &239776613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239776612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e79d8e882ae08c4d96e33a9aa8b0a15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  Towers:
+  - {fileID: 1435474450}
+  - {fileID: 1310144594}
+  - {fileID: 2128132146}
+  - {fileID: 1258447030}
+  - {fileID: 711558382}
+  minEventTime: 5
+  maxEventTime: 10
+--- !u!4 &239776614
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239776612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 631.1156, y: 412.207, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &290456873
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +397,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
   m_PrefabInstance: {fileID: 995381071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &711558382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777899426137734300, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+  m_PrefabInstance: {fileID: 995381071}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13a3076b349174bb6950ba01bc3ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
 --- !u!1 &842130861
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +508,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132180896}
     m_Modifications:
+    - target: {fileID: 269036066374363069, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_text
+      value: The BIG Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 4042382486421137668, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -475,11 +546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.3406
+      value: 51.7995
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 37.8992
+      value: 58.5125
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,11 +582,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 160
+      value: 221.2049
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 154
+      value: 258.46118
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -533,6 +604,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 192.5301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16.385
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -546,6 +625,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132180896}
     m_Modifications:
+    - target: {fileID: 269036066374363069, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_text
+      value: The Southern Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSize
+      value: 21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4042382486421137668, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -576,11 +671,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.3406
+      value: 55.511
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 37.8992
+      value: 62.705
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -612,11 +707,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 110
+      value: 142.16907
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -270
+      value: -374.4426
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -634,6 +729,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 197.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16.302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 59.194
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -647,6 +754,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132180896}
     m_Modifications:
+    - target: {fileID: 269036066374363069, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_text
+      value: The Northern Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSize
+      value: 21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4042382486421137668, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -677,11 +800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.3406
+      value: 52.9957
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 37.8992
+      value: 59.8637
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -713,11 +836,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -136
+      value: -209.76642
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 268
+      value: 359.7696
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -734,6 +857,14 @@ PrefabInstance:
     - target: {fileID: 8510533684624099311, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Name
       value: Tower (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 195.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.145
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -825,11 +956,44 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
   m_PrefabInstance: {fileID: 1056339755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1258447030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777899426137734300, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+  m_PrefabInstance: {fileID: 1056339755}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13a3076b349174bb6950ba01bc3ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
 --- !u!224 &1310144590 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
   m_PrefabInstance: {fileID: 1642836308}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1310144594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777899426137734300, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+  m_PrefabInstance: {fileID: 1642836308}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13a3076b349174bb6950ba01bc3ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
+--- !u!114 &1435474450 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777899426137734300, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+  m_PrefabInstance: {fileID: 2019341329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13a3076b349174bb6950ba01bc3ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
 --- !u!1001 &1642836308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -838,10 +1002,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132180896}
     m_Modifications:
+    - target: {fileID: 269036066374363069, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_text
+      value: The Eastern Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSize
+      value: 21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4042382486421137668, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6382851257576441527, guid: abe4b96befbe4644b99fcc69219da6d8, type: 3}
+    - target: {fileID: 5877887522743932995, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -868,11 +1052,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.3406
+      value: 54.685
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 37.8992
+      value: 61.7714
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -904,11 +1088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 192.34
+      value: 181.17
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: -57.9094
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -925,6 +1109,14 @@ PrefabInstance:
     - target: {fileID: 8510533684624099311, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Name
       value: Tower (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 195.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.145
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1046,6 +1238,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_text
+      value: The Western Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSize
+      value: 21.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_margin.z
+      value: -1.0567627
+      objectReference: {fileID: 0}
+    - target: {fileID: 411613183418891141, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4042382486421137668, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1076,11 +1284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32.3406
+      value: 57.2877
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 37.8992
+      value: 64.712
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1112,11 +1320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -155.76648
+      value: -235.49805
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 64.327576
+      value: 127.93738
       objectReference: {fileID: 0}
     - target: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1134,6 +1342,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 195.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8585302241936931411, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -15.145
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1144,6 +1360,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7727881630111611936, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
   m_PrefabInstance: {fileID: 1018349620}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2128132146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5777899426137734300, guid: a5d25a993fa2e3a48b663ff834ea4326, type: 3}
+  m_PrefabInstance: {fileID: 1018349620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf13a3076b349174bb6950ba01bc3ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1152,3 +1379,4 @@ SceneRoots:
   - {fileID: 1708856170}
   - {fileID: 842130863}
   - {fileID: 290456876}
+  - {fileID: 239776614}

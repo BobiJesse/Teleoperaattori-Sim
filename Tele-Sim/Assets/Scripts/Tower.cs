@@ -14,6 +14,8 @@ public class Tower : MonoBehaviour
 
     private Vector3 originalScale;
     private Coroutine pulseCoroutine;
+    public GameObject fixButton;
+    public bool isBroken;
 
     [Header("Tekstit")]
     public TextMeshProUGUI descriptionText;
@@ -34,6 +36,8 @@ public class Tower : MonoBehaviour
     {
         if(alert)
         {
+            isBroken = true;
+            fixButton.SetActive(true);
             descriptionText.text = brokenText;
             buttonImage.sprite = alertSprite;
             if (pulseCoroutine == null)
@@ -43,6 +47,8 @@ public class Tower : MonoBehaviour
         }
         else
         {
+            isBroken = false;
+            fixButton.SetActive(false);
             descriptionText.text = workingText;
             buttonImage.sprite = defaultSprite;
             if (pulseCoroutine != null)

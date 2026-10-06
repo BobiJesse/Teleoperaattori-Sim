@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Tower tower;
 
     [Header("Events")]
     //public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
@@ -62,11 +61,10 @@ public class GameManager : MonoBehaviour
 
         Tower currentMapObject = Towers[num];
 
-        currentMapObject.SetAlert(true);
-
-
-
-        tower.SetAlert(true);
+        if(!currentMapObject.isBroken)
+        {
+            currentMapObject.SetAlert(true);
+        }
 
 
         int randomNumber = Random.Range(0, 5);
