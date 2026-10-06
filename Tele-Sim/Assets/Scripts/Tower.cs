@@ -88,5 +88,8 @@ public class Tower : MonoBehaviour
     public void fixTower()
     {
         SetAlert(false);
+
+        GameManager.instance.brokenTowers.Remove(this);
+        GameManager.instance.Towers.Add(this);
     }
 }

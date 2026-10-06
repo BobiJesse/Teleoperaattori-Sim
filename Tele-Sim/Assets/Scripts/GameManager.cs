@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     //public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
     //public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
     public List<Tower> Towers = new List<Tower>();
+    public List<Tower> brokenTowers = new List<Tower>();
 
     /*
     [Header("Windows")]
@@ -57,16 +58,23 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
+        if (Towers.Count <= 0)
+        {
+            Debug.Log("You lost");
+            return;
+        }
+
         int num = Random.Range(0, Towers.Count);
 
         Tower currentMapObject = Towers[num];
+        Towers.Remove(currentMapObject);
+        brokenTowers.Add(currentMapObject);
 
-        if(!currentMapObject.isBroken)
-        {
-            currentMapObject.SetAlert(true);
-        }
+        currentMapObject.SetAlert(true);
 
 
+
+        /*
         int randomNumber = Random.Range(0, 5);
 
         if (randomNumber < 4)
@@ -77,6 +85,7 @@ public class GameManager : MonoBehaviour
         {
             //TriggerBigEvent();
         }
+        */
 
     }
 }
