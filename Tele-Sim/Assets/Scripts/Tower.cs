@@ -65,4 +65,9 @@ public class Tower : MonoBehaviour
 
         transform.localScale = target;
     }
+
+    public void fixTower()
+    {
+        SetAlert(false);
+    }
 }

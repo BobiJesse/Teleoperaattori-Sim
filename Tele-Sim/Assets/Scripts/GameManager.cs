@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [Header("Events")]
     //public List<BigProblemEvent> bigEvents = new List<BigProblemEvent>();
     //public List<SmallProblemEvent> smallEvents = new List<SmallProblemEvent>();
-    public List<MapObject> mapObjects = new List<MapObject>();
+    public List<Tower> Towers = new List<Tower>();
 
     /*
     [Header("Windows")]
@@ -58,34 +58,34 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
-<<<<<<< HEAD
-        int num = Random.Range(0, mapObjects.Count);
+        int num = Random.Range(0, Towers.Count);
 
-        MapObject currentMapObject = mapObjects[num];
+        Tower currentMapObject = Towers[num];
 
-        currentMapObject.BreakObject();
+        currentMapObject.SetAlert(true);
 
-        /*
-=======
+
+
         tower.SetAlert(true);
 
->>>>>>> origin/TuomasBranch
+
         int randomNumber = Random.Range(0, 5);
 
         if (randomNumber < 4)
         {
-            TriggerSmallEvent();
+            //TriggerSmallEvent();
         }
         else
         {
-            TriggerBigEvent();
+            //TriggerBigEvent();
         }
-        */
+
     }
+}
 
-    /*
+  
 
-    public void TriggerSmallEvent()
+    /*public void TriggerSmallEvent()
     {
         int weight = 0;
 
@@ -144,5 +144,5 @@ public class GameManager : MonoBehaviour
             roll -= listedEvent.weight;
         }
     }
-    */
-}
+
+}*/
