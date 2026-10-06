@@ -1,6 +1,7 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class Tower : MonoBehaviour
 {
@@ -13,20 +14,27 @@ public class Tower : MonoBehaviour
 
     private Vector3 originalScale;
     private Coroutine pulseCoroutine;
-    public TextMeshProUGUI TextBox;
 
-    public string WorkingText = "Tower Working";
-    public string AlertText = "Tower Alert";
+    [Header("Tekstit")]
+    public TextMeshProUGUI descriptionText;
+    public string workingText;
+    public string brokenText;
 
     private void Awake()
     {
         originalScale = buttonImage.transform.localScale;
     }
 
+    private void Start()
+    {
+        descriptionText.text = workingText;
+    }
+
     public void SetAlert(bool alert)
     {
         if(alert)
         {
+            descriptionText.text = brokenText;
             buttonImage.sprite = alertSprite;
             if (pulseCoroutine == null)
             {
@@ -35,6 +43,7 @@ public class Tower : MonoBehaviour
         }
         else
         {
+            descriptionText.text = workingText;
             buttonImage.sprite = defaultSprite;
             if (pulseCoroutine != null)
             {
