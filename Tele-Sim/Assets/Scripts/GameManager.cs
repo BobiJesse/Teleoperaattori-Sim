@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     {
         if (Towers.Count <= 1)
         {
+            AudioManager.Instance.PlayGameEndSound();
             Debug.Log("You lost");
             endIMG.SetActive(true);
             return;
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
         brokenTowers.Add(currentMapObject);
 
         currentMapObject.SetAlert(true);
-
+        AudioManager.Instance.PlayBigAlertSound();
 
 
         /*

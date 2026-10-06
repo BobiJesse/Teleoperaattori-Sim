@@ -155,6 +155,7 @@ MonoBehaviour:
   - {fileID: 1258447030}
   - {fileID: 711558382}
   brokenTowers: []
+  endIMG: {fileID: 354960878}
   minEventTime: 5
   maxEventTime: 10
 --- !u!4 &239776614
