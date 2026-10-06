@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     public void TriggerEvent()
     {
-        if (Towers.Count <= 0)
+        if (Towers.Count <= 1)
         {
             Debug.Log("You lost");
             return;
